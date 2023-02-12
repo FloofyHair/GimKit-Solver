@@ -4,7 +4,7 @@
     <script src="popup.js"></script>
   </head>
 
-  <body style="width: 150px;">
+  <body style="width: 150px; height: 120px;">
     <center>
       <p class="gimkit">GimKit</p>
       <p class="solver">Solver</p>
@@ -17,12 +17,20 @@
 <style>
   .button {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-    background-color: darkorchid; 
+    background-color: darkorchid;
     color: white; 
     border: none; 
     font-size: 20px;
+    margin: 2px;
     padding: 10px;
   }
+
+  .button:hover {
+    margin: 0px;
+    border: 2px solid  goldenrod;
+    border-radius: 2px;
+    cursor:pointer;
+}
 
   .gimkit {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
@@ -39,4 +47,6 @@
     font-size: 36px;
     color: darkorchid; 
   }
+
+  
 </style>
