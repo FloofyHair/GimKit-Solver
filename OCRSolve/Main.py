@@ -26,7 +26,7 @@ def getData(app_title): #gets page image and does some post processing to it
         im = pyautogui.screenshot(region=(x, y, width, height))
 
         #look at what page we are on (Questions, Win, Lose)
-        im.save("OCRSolve/im.png")
+        #im.save("OCRSolve/im.png")
         width, height = im.size
 
         pixel = im.getpixel((0, 0))
@@ -40,11 +40,11 @@ def getData(app_title): #gets page image and does some post processing to it
         #Image manipulation for text identification
         im = ImageOps.grayscale(im)
         im = ImageOps.invert(im)
-        im.save("OCRSolve/im_grayscale.png")
+        #im.save("OCRSolve/im_grayscale.png")
         img = np.array(im) #turn image into numpy array
         img[img >= 10] = 255 # Replace all non-black pixels with white
         im = Image.fromarray(img) #turn array backminto image
-        im.save("OCRSolve/im_modified.png") # Save the processed image
+        #im.save("OCRSolve/im_modified.png") # Save the processed image
 
         if page == "Win":
             return "W", im

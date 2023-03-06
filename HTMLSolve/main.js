@@ -37,6 +37,7 @@ function addAnswer(question, answer) {
 
 var observer = new MutationObserver(function(mutations) {
     if (mutations.length > 0) {
+        console.log("main")
 
 
 
@@ -52,12 +53,16 @@ var observer = new MutationObserver(function(mutations) {
             answer = getAnswer(question)
             if (answer == answer_1) {
                 text[1].parentNode.parentNode.parentNode.parentNode.parentNode.style.borderColor = "rgb(255 179 0)"
-            } else if (answer == answer_2) {
+                text[1].parentNode.parentNode.parentNode.parentNode.parentNode.click()
+            } else if (answer == answer_2) {    
                 text[2].parentNode.parentNode.parentNode.parentNode.parentNode.style.borderColor = "rgb(255 179 0)"
+                text[2].parentNode.parentNode.parentNode.parentNode.parentNode.click()
             } else if (answer == answer_3) {
                 text[3].parentNode.parentNode.parentNode.parentNode.parentNode.style.borderColor = "rgb(255 179 0)"
+                text[3].parentNode.parentNode.parentNode.parentNode.parentNode.click()
             } else if (answer == answer_4) {
                 text[4].parentNode.parentNode.parentNode.parentNode.parentNode.style.borderColor = "rgb(255 179 0)"
+                text[4].parentNode.parentNode.parentNode.parentNode.parentNode.click()
             }
             
         }
